@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PCFSEQJZ1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4PCFSEQJZ1');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silent Oblivion — Indie Pop · Alternative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black:    #07060f;
+  --ink:      #0a0914;
+  --deep:     #0e0c1c;
+  --purple:   #7b5ea7;
+  --purp-lt:  #a07dd4;
+  --violet:   #9d7fd4;
+  --pink:     #e879b8;
+  --pink-lt:  #f0a0d0;
+  --lavender: #c4aef0;
+  --white:    #f0eaf8;
+  --chrome:   #c8c0e0;
+  --mist:     #8a84a8;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── NAV ─────────────────────────────────────────────────────────────────── */
+#topnav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 68px;
+  background: transparent; border-bottom: 1px solid transparent;
+  transition: background 0.4s, border-color 0.4s;
+}
+#topnav.scrolled {
+  background: rgba(7,6,15,0.95);
+  border-color: rgba(123,94,167,0.3);
+  backdrop-filter: blur(12px);
+}
+.nav-logo { height: 44px; width: auto; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  color: var(--mist); text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--purp-lt); }
+
+/* ── HERO ─────────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative; height: 100vh; min-height: 640px;
+  display: flex; align-items: flex-end; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png') center 40% / contain no-repeat,
+              radial-gradient(ellipse at 30% 60%, rgba(123,94,167,0.15) 0%, transparent 55%),
+              radial-gradient(ellipse at 70% 20%, rgba(157,127,212,0.08) 0%, transparent 45%),
+              var(--black);
+}
+.hero-vignette {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(7,6,15,0.4) 0%, rgba(7,6,15,0.0) 30%, rgba(7,6,15,0.0) 50%, rgba(7,6,15,0.97) 100%),
+    linear-gradient(to right, rgba(7,6,15,0.8) 0%, transparent 60%);
+}
+.hero-glow {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 340px;
+  background: linear-gradient(to top, rgba(123,94,167,0.12) 0%, rgba(232,121,184,0.04) 60%, transparent 100%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 3.5rem 5rem; max-width: 700px;
+}
+.hero-logo-wrap { margin-bottom: 1.8rem; }
+.hero-logo-wrap img {
+  height: 120px; width: auto;
+  filter: drop-shadow(0 4px 28px rgba(123,94,167,0.6)) drop-shadow(0 0 60px rgba(232,121,184,0.2));
+}
+.hero-tagline {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 300;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--chrome); opacity: 0.75;
+  margin-bottom: 2rem; line-height: 1.9;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.cta-primary {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: var(--white); border: none;
+  padding: 0.85rem 2rem;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
+  box-shadow: 0 0 22px rgba(123,94,167,0.45);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.cta-primary:hover { box-shadow: 0 0 38px rgba(123,94,167,0.75); transform: translateY(-2px); }
+.cta-secondary {
+  background: transparent; color: var(--lavender);
+  border: 1px solid rgba(196,174,240,0.4);
+  padding: 0.85rem 2rem; text-decoration: none; display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 400;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(196,174,240,0.4);
+  transition: border-color 0.2s, text-shadow 0.2s;
+}
+.cta-secondary:hover { border-color: var(--lavender); text-shadow: 0 0 24px rgba(196,174,240,0.8); }
+
+/* ── SECTION CHROME ──────────────────────────────────────────────────────── */
+.section-header { text-align: center; padding: 5rem 2rem 3.5rem; }
+.section-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.35em; text-transform: uppercase; color: var(--purple);
+  text-shadow: 0 0 12px rgba(123,94,167,0.6); margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  background: linear-gradient(135deg, var(--lavender), var(--chrome), var(--pink-lt));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.neon-rule {
+  width: 60px; height: 2px; margin: 1.2rem auto 0;
+  background: linear-gradient(to right, var(--purple), var(--pink));
+  box-shadow: 0 0 10px rgba(123,94,167,0.5);
+}
+
+/* ── BIO ─────────────────────────────────────────────────────────────────── */
+#bio { background: var(--ink); padding-bottom: 5rem; position: relative; z-index: 1; }
+.bio-inner {
+  max-width: 700px; margin: 0 auto; padding: 0 2rem; text-align: center;
+}
+.bio-inner p { color: var(--mist); line-height: 1.95; font-size: 0.95rem; margin-bottom: 1.2rem; }
+.bio-inner em { color: var(--chrome); font-style: italic; }
+
+/* ── LATEST SINGLE ───────────────────────────────────────────────────────── */
+#latest-single {
+  background: var(--deep); padding: 5rem 0;
+  border-top: 1px solid rgba(123,94,167,0.2);
+  border-bottom: 1px solid rgba(232,121,184,0.1);
+  position: relative; z-index: 1;
+}
+.latest-header { text-align: center; padding: 0 2rem 3.5rem; }
+.latest-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.35em; text-transform: uppercase; color: var(--pink);
+  text-shadow: 0 0 12px rgba(232,121,184,0.5); margin-bottom: 0.75rem;
+}
+.latest-inner {
+  max-width: 1040px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 380px 1fr; gap: 4rem; align-items: center;
+}
+.latest-art {
+  width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+  box-shadow: 0 0 60px rgba(123,94,167,0.3), 0 0 30px rgba(232,121,184,0.12), 0 24px 64px rgba(0,0,0,0.8);
+}
+.latest-badge {
+  display: inline-block; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--pink); border: 1px solid rgba(232,121,184,0.4);
+  padding: 0.25rem 0.85rem; margin-bottom: 1.2rem;
+  text-shadow: 0 0 8px rgba(232,121,184,0.4);
+}
+.latest-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase;
+  letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.5rem; color: var(--white);
+}
+.latest-sub {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--mist); margin-bottom: 2rem;
+}
+.latest-play-btn {
+  background: transparent; color: var(--pink);
+  border: 1px solid rgba(232,121,184,0.5); cursor: pointer;
+  padding: 0.85rem 2rem; display: inline-flex; align-items: center; gap: 0.75rem;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.latest-play-btn:hover { border-color: var(--pink); box-shadow: 0 0 20px rgba(232,121,184,0.3); }
+
+/* ── SINGLES GRID ────────────────────────────────────────────────────────── */
+#singles { background: var(--ink); padding: 5rem 0; border-top: 1px solid rgba(123,94,167,0.12); position: relative; z-index: 1; }
+.singles-wrap { max-width: 980px; margin: 0 auto; padding: 0 2rem; }
+.singles-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 2.5rem;
+}
+.single-card {
+  position: relative; cursor: pointer;
+  border: 1px solid rgba(123,94,167,0.15);
+  background: rgba(123,94,167,0.03); overflow: hidden;
+  transition: border-color 0.2s;
+}
+.single-card:hover { border-color: rgba(123,94,167,0.4); }
+.single-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(to right, var(--purple), var(--pink));
+}
+.single-art-wrap { position: relative; overflow: hidden; }
+.single-art-img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.single-card:hover .single-art-img { transform: scale(1.04); }
+.single-play-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(7,6,15,0.55); opacity: 0; transition: opacity 0.2s;
+}
+.single-card:hover .single-play-overlay { opacity: 1; }
+.single-play-big {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  border: none; color: var(--white); font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; padding-left: 4px;
+  box-shadow: 0 0 20px rgba(123,94,167,0.5);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+.single-play-big:hover { transform: scale(1.08); box-shadow: 0 0 30px rgba(123,94,167,0.7); }
+.single-info { padding: 1.2rem 1.3rem 1.5rem; }
+.single-type {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--pink);
+  font-weight: 400; margin-bottom: 0.35rem; text-shadow: 0 0 8px rgba(232,121,184,0.4);
+}
+.single-name {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--white);
+  line-height: 1.1; margin-bottom: 0.2rem;
+}
+.single-by {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: rgba(196,174,240,0.45); font-weight: 400;
+}
+
+/* ── ALBUM ────────────────────────────────────────────────────────────────── */
+#album { background: var(--deep); padding: 5rem 0; border-top: 1px solid rgba(196,174,240,0.1); position: relative; z-index: 1; }
+.album-layout {
+  max-width: 1040px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 380px 1fr; gap: 4rem; align-items: start;
+}
+.album-cover {
+  width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+  box-shadow: 0 0 60px rgba(123,94,167,0.25), 0 0 120px rgba(232,121,184,0.08), 0 24px 64px rgba(0,0,0,0.8);
+}
+.album-badge {
+  display: inline-block; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--lavender); border: 1px solid rgba(196,174,240,0.4);
+  padding: 0.25rem 0.85rem; margin-bottom: 1.2rem; text-shadow: 0 0 8px rgba(196,174,240,0.4);
+}
+.album-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase;
+  letter-spacing: 0.06em; line-height: 1.1; margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--pink-lt), var(--chrome), var(--lavender));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.album-artist {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--mist); margin-bottom: 1.2rem;
+}
+.album-desc { color: var(--mist); font-size: 0.92rem; line-height: 1.85; margin-bottom: 2rem; max-width: 460px; }
+.album-desc em { color: var(--chrome); font-style: italic; }
+.stream-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+.tracklist { border-top: 1px solid rgba(123,94,167,0.12); }
+.track-row {
+  display: grid; grid-template-columns: 2rem 1fr auto;
+  align-items: center; gap: 0.75rem; padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(123,94,167,0.06); transition: background 0.2s;
+}
+.track-row:hover { background: rgba(123,94,167,0.04); }
+.track-num { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; color: var(--mist); opacity: 0.4; text-align: right; }
+.track-title { font-size: 0.9rem; color: var(--white); letter-spacing: 0.02em; }
+.track-play-btn {
+  background: transparent; border: 1px solid rgba(123,94,167,0.3);
+  color: var(--purple); width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 0.6rem; flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.track-play-btn:hover { background: rgba(123,94,167,0.12); border-color: var(--purple); box-shadow: 0 0 10px rgba(123,94,167,0.3); }
+.track-play-btn.playing { background: rgba(123,94,167,0.18); border-color: var(--purp-lt); box-shadow: 0 0 15px rgba(123,94,167,0.4); }
+.track-coming { font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem; letter-spacing: 0.2em; color: var(--mist); opacity: 0.35; text-transform: uppercase; }
+
+/* ── FIXED PLAYER ─────────────────────────────────────────────────────────── */
+#player {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(7,6,15,0.97); border-top: 1px solid rgba(123,94,167,0.3);
+  backdrop-filter: blur(16px);
+  grid-template-columns: auto 1fr auto; align-items: center;
+  gap: 1.5rem; padding: 0.8rem 2rem;
+  transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+#player.visible { transform: translateY(0); }
+.p-info { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.p-thumb { width: 42px; height: 42px; object-fit: cover; border: 1px solid rgba(123,94,167,0.3); flex-shrink: 0; box-shadow: 0 0 10px rgba(123,94,167,0.2); }
+.p-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0.06em; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p-sub { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); opacity: 0.55; }
+.p-controls { display: flex; align-items: center; flex-direction: column; flex: 1; gap: 0.5rem; min-width: 0; }
+.p-btn-row { display: flex; align-items: center; gap: 1.2rem; }
+.p-btn { background: transparent; border: none; color: var(--mist); cursor: pointer; font-size: 0.9rem; padding: 0.25rem; transition: color 0.2s; }
+.p-btn:hover { color: var(--purp-lt); }
+#p-playbtn {
+  width: 36px; height: 36px; border: 1px solid rgba(123,94,167,0.5);
+  background: transparent; color: var(--purple); cursor: pointer; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+#p-playbtn:hover { background: rgba(123,94,167,0.12); box-shadow: 0 0 15px rgba(123,94,167,0.4); }
+.p-progress { display: flex; align-items: center; gap: 0.75rem; width: 100%; }
+.p-time { font-size: 0.6rem; color: var(--mist); opacity: 0.55; white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; }
+#p-bar { flex: 1; height: 3px; background: rgba(123,94,167,0.15); cursor: pointer; position: relative; }
+#p-fill { height: 100%; width: 0%; background: linear-gradient(to right, var(--purple), var(--pink)); box-shadow: 0 0 8px rgba(123,94,167,0.5); pointer-events: none; }
+.p-right { display: flex; align-items: center; gap: 1rem; }
+#p-vol { width: 72px; accent-color: var(--purple); }
+#p-close { background: transparent; border: none; color: var(--mist); cursor: pointer; font-size: 1rem; opacity: 0.5; transition: opacity 0.2s; }
+#p-close:hover { opacity: 1; }
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+footer {
+  background: var(--black); border-top: 1px solid rgba(123,94,167,0.12);
+  padding: 4rem 2rem 3rem; text-align: center; position: relative; z-index: 1;
+}
+.foot-logo { height: 60px; width: auto; margin: 0 auto 1.2rem; display: block; opacity: 0.8; }
+.foot-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem;
+  letter-spacing: 0.3em; text-transform: uppercase; color: var(--mist); opacity: 0.4; margin-bottom: 1.5rem;
+}
+.foot-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.foot-links a {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mist); text-decoration: none; opacity: 0.4; transition: opacity 0.2s, color 0.2s;
+}
+.foot-links a:hover { opacity: 1; color: var(--purp-lt); }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .latest-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .latest-art { max-width: 280px; margin: 0 auto; display: block; }
+  .album-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .album-cover { max-width: 300px; margin: 0 auto; }
+  .singles-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 0 1.8rem 3.5rem; }
+  .hero-logo-wrap img { height: 80px; }
+  #player { grid-template-columns: 1fr; }
+  .p-info { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="topnav">
+  <a href="#"><img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png" alt="Silent Oblivion" class="nav-logo"></a>
+  <ul class="nav-links">
+    <li><a href="#bio">About</a></li>
+    <li><a href="#latest-single">Latest</a></li>
+    <li><a href="#singles">Singles</a></li>
+    <li><a href="#album">Discography</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png" alt="Silent Oblivion">
+    </div>
+    <p class="hero-tagline">Indie Pop · Alternative<br>Hello Texas Records</p>
+    <div class="hero-ctas">
+      <button class="cta-primary" onclick="playTrack('liftoff')">&#9654;&nbsp; Play Lift Off (With a Bang)</button>
+      <a href="#album" class="cta-secondary">Discography</a>
+    </div>
+  </div>
+</section>
+
+<!-- BIO / ABOUT -->
+<section id="bio">
+  <div class="section-header">
+    <div class="section-eyebrow">About</div>
+    <h2 class="section-title">Silent Oblivion</h2>
+    <div class="neon-rule"></div>
+  </div>
+  <div class="bio-inner">
+    <p>Silent Oblivion moves through sound the way a ghost moves through a room — felt before they're seen. Their music lives at the intersection of indie pop and alternative, where dreamy textures meet hooks that refuse to leave.</p>
+    <p>Their debut album <em>Beginnings Past</em> is a collection of singles built around bold ideas and bigger feelings — from the breezy momentum of <em>Cruisin</em> to the sun-soaked energy of <em>Surfin</em> to the hauntingly catchy <em>Lip Gloss Ghost</em>.</p>
+    <p>Released through Hello Texas Records. Already in motion. Just getting started.</p>
+  </div>
+</section>
+
+<!-- LATEST SINGLE FEATURED -->
+<section id="latest-single">
+  <div class="latest-header">
+    <div class="latest-eyebrow">Latest Single</div>
+    <h2 class="section-title" id="latest-section-title">Lift Off (With a Bang)</h2>
+    <div class="neon-rule"></div>
+  </div>
+  <div class="latest-inner">
+    <div>
+      <img id="latest-cover" src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-lift-off-cover.png" alt="Lift Off (With a Bang)" class="latest-art">
+    </div>
+    <div>
+      <div class="latest-badge">Latest Release</div>
+      <h2 id="latest-title" class="latest-title">Lift Off (With a Bang)</h2>
+      <div class="latest-sub">Silent Oblivion · Hello Texas Records</div>
+      <button class="latest-play-btn" onclick="playTrack('liftoff')">&#9654;&nbsp; Play Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- LYRIC VIDEO -->
+<section id="lyric-video" style="background:var(--ink);padding:5rem 0;border-top:1px solid rgba(123,94,167,0.2);position:relative;z-index:1;">
+  <div style="text-align:center;padding:0 2rem 3rem;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--purple);text-shadow:0 0 12px rgba(123,94,167,0.6);margin-bottom:0.75rem;">Official Lyric Video</div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:0.06em;text-transform:uppercase;background:linear-gradient(135deg,var(--lavender),var(--chrome),var(--pink-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Lip Gloss Ghost</h2>
+    <div style="width:60px;height:2px;margin:1.2rem auto 0;background:linear-gradient(to right,var(--purple),var(--pink));box-shadow:0 0 10px rgba(123,94,167,0.5);"></div>
+  </div>
+  <div style="max-width:840px;margin:0 auto;padding:0 2rem;">
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;box-shadow:0 0 50px rgba(123,94,167,0.2),0 24px 64px rgba(0,0,0,0.6);">
+      <iframe src="https://www.youtube.com/embed/VJNSSSdlJ2s" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="https://youtu.be/VJNSSSdlJ2s" target="_blank" style="font-family:'Barlow Condensed',sans-serif;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;color:var(--lavender);border:1px solid rgba(196,174,240,0.4);padding:0.4rem 1.2rem;transition:border-color 0.2s;">Watch on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- SINGLES -->
+<section id="singles">
+  <div class="singles-wrap">
+    <div class="section-header" style="padding-top:0;text-align:left;">
+      <div class="section-eyebrow">Singles</div>
+      <h2 class="section-title">All Releases</h2>
+      <div class="neon-rule" style="margin-left:0;"></div>
+    </div>
+    <div class="singles-grid">
+
+      <!-- Lift Off (With a Bang) -->
+      <div class="single-card" onclick="playTrack('liftoff')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-lift-off-cover.png" alt="Lift Off (With a Bang)" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('liftoff')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single · Latest</div>
+          <div class="single-name">Lift Off (With a Bang)</div>
+          <div class="single-by">Silent Oblivion</div>
+        </div>
+      </div>
+
+      <!-- Lip Gloss Ghost -->
+      <div class="single-card" onclick="playTrack('lipglossghost')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-lip-gloss-ghost-cover.png" alt="Lip Gloss Ghost" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('lipglossghost')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single</div>
+          <div class="single-name">Lip Gloss Ghost</div>
+          <div class="single-by">Silent Oblivion</div>
+          <div style="margin-top:0.6rem;">
+            <a href="https://youtu.be/VJNSSSdlJ2s" target="_blank" onclick="event.stopPropagation()" style="font-family:'Barlow Condensed',sans-serif;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;background:#333;color:#fff;padding:0.25rem 0.65rem;border-radius:2px;">Lyric Video</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cruisin -->
+      <div class="single-card" onclick="playTrack('cruisin')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-cruisin-cover.png" alt="Cruisin" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('cruisin')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single</div>
+          <div class="single-name">Cruisin</div>
+          <div class="single-by">Silent Oblivion</div>
+        </div>
+      </div>
+
+      <!-- Surfin -->
+      <div class="single-card" onclick="playTrack('surfin')">
+        <div class="single-art-wrap">
+          <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-surfin-cover.png" alt="Surfin" class="single-art-img">
+          <div class="single-play-overlay">
+            <button class="single-play-big" onclick="event.stopPropagation();playTrack('surfin')">&#9654;</button>
+          </div>
+        </div>
+        <div class="single-info">
+          <div class="single-type">Single</div>
+          <div class="single-name">Surfin</div>
+          <div class="single-by">Silent Oblivion</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ALBUM: BEGINNINGS PAST -->
+<section id="album">
+  <div class="section-header">
+    <div class="section-eyebrow">Debut Album</div>
+    <h2 class="section-title">Beginnings Past</h2>
+    <div class="neon-rule"></div>
+  </div>
+  <div class="album-layout">
+    <div>
+      <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-beginnings-past-album-cover.png" alt="Beginnings Past" class="album-cover">
+    </div>
+    <div style="padding-top:0.5rem;">
+      <div class="album-badge">Debut Album</div>
+      <h2 class="album-title">Beginnings Past</h2>
+      <div class="album-artist">Silent Oblivion</div>
+      <p class="album-desc">Three singles. One vision. <em>Beginnings Past</em> is where Silent Oblivion's sound takes shape — dreamy, propulsive, and impossible to shake. More tracks coming.</p>
+      <div class="stream-row">
+        <!-- Streaming links coming soon -->
+      </div>
+      <div class="tracklist">
+        <div class="track-row">
+          <span class="track-num">01</span>
+          <span class="track-title">Lip Gloss Ghost</span>
+          <button class="track-play-btn" id="btn_lipglossghost" onclick="playTrack('lipglossghost')">&#9654;</button>
+        </div>
+        <div class="track-row">
+          <span class="track-num">02</span>
+          <span class="track-title">Cruisin</span>
+          <button class="track-play-btn" id="btn_cruisin" onclick="playTrack('cruisin')">&#9654;</button>
+        </div>
+        <div class="track-row">
+          <span class="track-num">03</span>
+          <span class="track-title">Surfin</span>
+          <button class="track-play-btn" id="btn_surfin" onclick="playTrack('surfin')">&#9654;</button>
+        </div>
+        <div class="track-row" style="opacity:0.35;">
+          <span class="track-num">—</span>
+          <span class="track-title" style="font-size:0.8rem;">More tracks coming soon&hellip;</span>
+          <span class="track-coming">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png" alt="Silent Oblivion" class="foot-logo">
+  <div class="foot-label">A Hello Texas Records Release · hellotexasrecords.com</div>
+  <div class="foot-links">
+    <a href="#bio">About</a>
+    <a href="#singles">Singles</a>
+    <a href="#album">Discography</a>
+    <a href="https://stevep999.github.io/hello-texas-records/">Label</a>
+  </div>
+</footer>
+
+<!-- FIXED PLAYER -->
+<div id="player">
+  <div class="p-info">
+    <img id="p-thumb" class="p-thumb" src="" alt="">
+    <div>
+      <div id="p-title" class="p-title">—</div>
+      <div id="p-sub" class="p-sub">Silent Oblivion</div>
+    </div>
+  </div>
+  <div class="p-controls">
+    <div class="p-btn-row">
+      <button class="p-btn" onclick="prevTrack()" title="Previous">&#9664;&#9664;</button>
+      <button id="p-playbtn" onclick="togglePlay()">&#9654;</button>
+      <button class="p-btn" onclick="nextTrack()" title="Next">&#9654;&#9654;</button>
+    </div>
+    <div class="p-progress">
+      <span class="p-time" id="p-cur">0:00</span>
+      <div id="p-bar" onclick="seekTo(event)"><div id="p-fill"></div></div>
+      <span class="p-time" id="p-dur">0:00</span>
+    </div>
+  </div>
+  <div class="p-right">
+    <input type="range" id="p-vol" min="0" max="1" step="0.01" value="0.85" oninput="setVol(this.value)">
+    <button id="p-close" onclick="closePlayer()" title="Close">✕</button>
+  </div>
+</div>
+
+<audio id="audio"></audio>
+
+<script>
+const BASE = 'https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/';
+
+const TRACKS = {
+  liftoff: {
+    title: 'Lift Off (With a Bang)',
+    sub:   'Single',
+    src:   'https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1',
+    thumb: BASE + 'silent-oblivion-lift-off-cover.png'
+  },
+  lipglossghost: {
+    title: 'Lip Gloss Ghost',
+    sub:   'Beginnings Past',
+    src:   'https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1',
+    thumb: BASE + 'silent-oblivion-lip-gloss-ghost-cover.png'
+  },
+  cruisin: {
+    title: 'Cruisin',
+    sub:   'Beginnings Past',
+    src:   'https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1',
+    thumb: BASE + 'silent-oblivion-cruisin-cover.png'
+  },
+  surfin: {
+    title: 'Surfin',
+    sub:   'Beginnings Past',
+    src:   'https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&raw=1',
+    thumb: BASE + 'silent-oblivion-surfin-cover.png'
+  }
+};
+const ORDER = ['liftoff', 'lipglossghost', 'cruisin', 'surfin'];
+
+let currentId = null, isPlaying = false;
+const audio  = document.getElementById('audio');
+const player = document.getElementById('player');
+
+function fmtTime(s) {
+  if (isNaN(s)) return '0:00';
+  return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+}
+
+function updatePlayBtn(playing) {
+  document.getElementById('p-playbtn').innerHTML = playing ? '&#9646;&#9646;' : '&#9654;';
+}
+
+function setAllTrackBtns(id, playing) {
+  document.querySelectorAll('.track-play-btn').forEach(b => b.classList.remove('playing'));
+  if (id && playing) {
+    const btn = document.getElementById('btn_' + id);
+    if (btn) btn.classList.add('playing');
+  }
+}
+
+function playTrack(id) {
+  const t = TRACKS[id]; if (!t) return;
+  currentId = id;
+  gtag('event', 'song_play', {
+    artist: 'Silent Oblivion',
+    song_title: t.title,
+    album: t.sub,
+    player_type: 'artist_site'
+  });
+  audio.removeAttribute('crossorigin');
+  audio.src = t.src; audio.load();
+  audio.play().catch(() => {
+    audio.addEventListener('canplaythrough', () => audio.play(), { once: true });
+  });
+  isPlaying = true;
+  document.getElementById('p-thumb').src = t.thumb;
+  document.getElementById('p-title').textContent = t.title;
+  document.getElementById('p-sub').textContent = t.sub;
+  player.style.display = 'grid';
+  player.classList.add('visible');
+  updatePlayBtn(true);
+  setAllTrackBtns(id, true);
+}
+
+function togglePlay() {
+  if (!currentId) return;
+  if (isPlaying) {
+    audio.pause(); isPlaying = false;
+    updatePlayBtn(false); setAllTrackBtns(currentId, false);
+  } else {
+    audio.play().catch(() => {}); isPlaying = true;
+    updatePlayBtn(true); setAllTrackBtns(currentId, true);
+  }
+}
+
+function prevTrack() {
+  const i = ORDER.indexOf(currentId);
+  playTrack(ORDER[(i - 1 + ORDER.length) % ORDER.length]);
+}
+function nextTrack() {
+  const i = ORDER.indexOf(currentId);
+  playTrack(ORDER[(i + 1) % ORDER.length]);
+}
+function closePlayer() {
+  audio.pause(); isPlaying = false;
+  player.classList.remove('visible');
+  setTimeout(() => { if (!player.classList.contains('visible')) player.style.display = 'none'; }, 380);
+  updatePlayBtn(false); setAllTrackBtns(null, false);
+}
+function seekTo(e) {
+  const r = document.getElementById('p-bar').getBoundingClientRect();
+  audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration;
+}
+function setVol(v) { audio.volume = parseFloat(v); }
+
+audio.addEventListener('timeupdate', () => {
+  const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+  document.getElementById('p-fill').style.width = pct + '%';
+  document.getElementById('p-cur').textContent = fmtTime(audio.currentTime);
+  document.getElementById('p-dur').textContent = fmtTime(audio.duration);
+});
+audio.addEventListener('ended', nextTrack);
+
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('topnav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Load latest.json to update latest single display
+fetch('latest.json').then(r => r.json()).then(d => {
+  if (d.title) {
+    document.querySelectorAll('#latest-title, #latest-section-title').forEach(el => el.textContent = d.title);
+  }
+  if (d.cover) {
+    document.querySelectorAll('#latest-cover').forEach(el => el.src = d.cover);
+  }
+}).catch(() => {});
+</script>
+</body>
+</html>
