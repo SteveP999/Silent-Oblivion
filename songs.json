@@ -7,40 +7,40 @@
     "album": "Beginnings Past",
     "type": "Latest Single",
     "isLatest": true,
-    "cover": "https://www.dropbox.com/scl/fo/yav34xoyzowafq21n3c8w/AG_KgObcy38W9urzJv9Pn94?rlkey=o7k3q3x14j07b2lnkrymxau0c&raw=1",
-    "audio": "https://www.dropbox.com/scl/fo/yav34xoyzowafq21n3c8w/AG_KgObcy38W9urzJv9Pn94?rlkey=o7k3q3x14j07b2lnkrymxau0c&raw=1"
-  },
-  {
-    "id": "cruisin",
-    "num": "02",
-    "title": "Cruisin'",
-    "artist": "Silent Oblivion",
-    "album": "Beginnings Past",
-    "type": "Single",
-    "isLatest": false,
-    "cover": "https://www.dropbox.com/scl/fi/43ku32q4ro0i69rhgh5gl/silent-oblivion-cruisin-cover.png?rlkey=bf6xlrzixo7otjk7utpslpx49&st=b2bl9xra&raw=1",
-    "audio": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&st=wsnap6x8&raw=1"
-  },
-  {
-    "id": "surfin",
-    "num": "03",
-    "title": "Surfin'",
-    "artist": "Silent Oblivion",
-    "album": "Beginnings Past",
-    "type": "Single",
-    "isLatest": false,
-    "cover": "https://www.dropbox.com/scl/fi/r464s8odd8erwhm6h9zwt/silent-oblivion-surfin-cover.png?rlkey=8g3op3s2z0qbv3usesgau6zuz&st=0z94tchd&raw=1",
-    "audio": "https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&st=djg1wm5b&raw=1"
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/covers/silent-oblivion-lift-off-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1"
   },
   {
     "id": "lip_gloss_ghost",
-    "num": "04",
+    "num": "02",
     "title": "Lip Gloss Ghost",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
     "type": "Single",
     "isLatest": false,
-    "cover": "https://www.dropbox.com/scl/fi/74pwxscjh6a9httc44t34/silent-oblivion-lip-gloss-ghost-cover.png?rlkey=xlnjk1ehksu2dozumzk9qnjbq&st=bl5m1uv2&raw=1",
-    "audio": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&st=mkkfpmb4&raw=1"
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/covers/silent-oblivion-lip-gloss-ghost-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1"
+  },
+  {
+    "id": "cruisin",
+    "num": "03",
+    "title": "Cruisin'",
+    "artist": "Silent Oblivion",
+    "album": "Beginnings Past",
+    "type": "Single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/covers/silent-oblivion-cruisin-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1"
+  },
+  {
+    "id": "surfin",
+    "num": "04",
+    "title": "Surfin'",
+    "artist": "Silent Oblivion",
+    "album": "Beginnings Past",
+    "type": "Single",
+    "isLatest": false,
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/covers/silent-oblivion-surfin-cover.png",
+    "audio": "https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&raw=1"
   }
 ]
