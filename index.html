@@ -11,6 +11,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Silent Oblivion — Indie Pop · Alternative</title>
+<link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -72,7 +73,22 @@ body{background:var(--black);color:var(--pearl);font-family:'DM Sans',sans-serif
 .track-play-btn{background:transparent;border:1px solid rgba(124,111,160,0.3);color:var(--accent);width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;flex-shrink:0;transition:background 0.2s,border-color 0.2s;}
 .track-play-btn:hover{background:rgba(124,111,160,0.15);border-color:var(--accent);}
 .track-play-btn.playing{background:rgba(124,111,160,0.2);border-color:var(--violet-lt);}
-#singles{background:var(--ink);padding:5rem 0;border-top:1px solid var(--violet-glow);}
+
+.album-track-art-block{grid-column:1/-1;margin-top:0.25rem;padding-top:2rem;border-top:1px solid var(--violet-glow);}
+.album-track-art-heading{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;}
+.album-track-art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(272px,100%),272px));gap:1.35rem;align-items:start;justify-content:start;}
+.album-track-art-card{cursor:pointer;}
+.album-track-art-img-wrap{position:relative;overflow:hidden;aspect-ratio:1;background:var(--black);}
+.album-track-art-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.82);transition:transform 0.35s,filter 0.35s;}
+.album-track-art-card:hover .album-track-art-img-wrap img{transform:scale(1.04);filter:brightness(1);}
+.album-track-art-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(6,7,12,0);transition:background 0.25s;}
+.album-track-art-card:hover .album-track-art-overlay{background:rgba(6,7,12,0.35);}
+.album-track-art-play{width:44px;height:44px;border:2px solid var(--accent);background:rgba(6,7,12,0.68);color:var(--accent);font-size:0.9rem;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:scale(0.86);transition:opacity 0.25s,transform 0.25s;}
+.album-track-art-card:hover .album-track-art-play,.album-track-art-play.playing{opacity:1;transform:scale(1);}
+.album-track-art-info{padding:0.7rem 0 0;}
+.album-track-art-title{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--white);line-height:1.15;}
+.album-track-art-sub{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mist);opacity:0.72;margin-top:0.25rem;}
+#singles{display:none;background:var(--ink);padding:5rem 0;border-top:1px solid var(--violet-glow);}
 .singles-grid{max-width:1040px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;}
 .single-card{cursor:pointer;}
 .single-img-wrap{position:relative;overflow:hidden;aspect-ratio:1;}
@@ -118,6 +134,7 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
   .album-cover{max-width:300px;margin:0 auto;}
   .latest-inner{grid-template-columns:1fr!important;gap:2rem;}
   .hero-content{padding:0 1.8rem 3.5rem;}
+  .album-track-art-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
   .singles-grid{grid-template-columns:repeat(2,1fr);gap:1rem;}
   #player{grid-template-columns:1fr;gap:0.5rem;}
   .p-info{display:none;}
@@ -126,21 +143,20 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
 </head>
 <body>
 <nav id="topnav">
-  <img class="nav-logo" src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png" alt="Silent Oblivion">
+  <img class="nav-logo" src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/artist/silent-oblivion-logo.png" alt="Silent Oblivion">
   <ul class="nav-links">
     <li><a href="#bio">About</a></li>
     <li><a href="#albums">Music</a></li>
-    <li><a href="#singles">Singles</a></li>
     <li><a href="https://stevep999.github.io/hello-texas-records/" target="_blank" style="opacity:0.45;font-size:0.62rem;">Hello Texas Records</a></li>
   </ul>
 </nav>
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/covers/silent-oblivion-beginnings-past-album-cover.png');"></div>
+  <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-beginnings-past-album-cover.png');"></div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <div class="hero-label">Hello Texas Records</div>
     <div class="hero-logo-wrap">
-      <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png" alt="Silent Oblivion">
+      <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/artist/silent-oblivion-logo.png" alt="Silent Oblivion">
     </div>
     <p class="hero-tagline">Some songs don't fade.<br>They haunt.</p>
     <div class="hero-ctas">
@@ -177,22 +193,10 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
   </div>
 </section>
 <div id="albums"><div class="loading-ph" id="albums-loading">Loading music…</div></div>
-<section id="singles">
-  <div class="section-header">
-    <div class="section-eyebrow">Singles</div>
-    <h2 class="section-title">All Tracks</h2>
-    <div class="violet-rule"></div>
-  </div>
-  <div class="singles-grid" id="singles-grid"><div class="loading-ph">Loading…</div></div>
-</section>
 <footer>
-  <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/silent-oblivion-logo.png" alt="Silent Oblivion" class="foot-logo">
+  <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/artist/silent-oblivion-logo.png" alt="Silent Oblivion" class="foot-logo">
   <div class="foot-label">Hello Texas Records</div>
   <div class="foot-links">
-    <a href="#" target="_blank">Spotify</a>
-    <a href="#" target="_blank">Apple Music</a>
-    <a href="#" target="_blank">YouTube</a>
-    <a href="#" target="_blank">Instagram</a>
     <a href="https://stevep999.github.io/hello-texas-records/" target="_blank">Label</a>
   </div>
 </footer>
@@ -255,6 +259,27 @@ document.getElementById('p-next').addEventListener('click',()=>{if(!cur||!ORDER.
 document.getElementById('p-bar').addEventListener('click',e=>{if(!audio.duration)return;const r=e.currentTarget.getBoundingClientRect();audio.currentTime=((e.clientX-r.left)/r.width)*audio.duration;});
 document.getElementById('p-vol').addEventListener('input',e=>{audio.volume=+e.target.value;});
 document.getElementById('p-close').addEventListener('click',()=>{audio.pause();player.classList.remove('visible');setTimeout(()=>{player.style.display='none';},350);setAllBtns(cur,false);cur=null;});
+function buildTrackArtGrid(tracks){
+  return `<div class="album-track-art-block">
+    <div class="album-track-art-heading">Album Tracks</div>
+    <div class="album-track-art-grid">
+      ${tracks.map(t=>`
+        <div class="album-track-art-card" onclick="playById('${t.id}')">
+          <div class="album-track-art-img-wrap">
+            <img src="${t.cover}" alt="${t.title}" loading="lazy">
+            <div class="album-track-art-overlay">
+              <button class="album-track-art-play" data-play-id="${t.id}" onclick="event.stopPropagation();playById('${t.id}')">&#9654;</button>
+            </div>
+          </div>
+          <div class="album-track-art-info">
+            <div class="album-track-art-title">${t.title}</div>
+            <div class="album-track-art-sub">${t.isLatest ? '<span class="track-badge">Latest Single</span>' : t.album}</div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  </div>`;
+}
 function buildAlbums(songs){
   const map=new Map();songs.forEach(s=>{if(!map.has(s.album))map.set(s.album,[]);map.get(s.album).push(s);});
   const container=document.getElementById('albums');container.innerHTML='';
@@ -276,22 +301,14 @@ function buildAlbums(songs){
           </div>`).join('')}
         </div>
       </div>
+      ${buildTrackArtGrid(tracks)}
     </div>`;
     container.appendChild(sec);i++;
   });
 }
 function buildSingles(songs){
-  document.getElementById('singles-grid').innerHTML=songs.map(s=>`
-    <div class="single-card" onclick="playById('${s.id}')">
-      <div class="single-img-wrap">
-        <img src="${s.cover}" alt="${s.title}" loading="lazy">
-        <div class="single-overlay"><button class="single-play-btn" data-play-id="${s.id}">&#9654;</button></div>
-      </div>
-      <div class="single-info">
-        <div class="single-title">${s.title}</div>
-        <div class="single-sub">${s.album}${s.isLatest?'<span class="single-badge">Latest</span>':''}</div>
-      </div>
-    </div>`).join('');
+  const el=document.getElementById('singles-grid');
+  if(el) el.innerHTML='';
 }
 function updateLatest(song){
   if(!song)return;
