@@ -1,19 +1,30 @@
-STANDARD LOCKED FEATURE SET
+# HTR Artist Site Standard — Frozen Contract
 
-Every artist site package must include:
-- Hero
-- About
-- Latest Release
-- Universal Video Section
-- Album sections
-- Song art under each album
-- Streaming buttons/data hooks
-- Floating hidden player
-- HTR link/footer
-- Radio-ready song data
+This repo is a full replacement package. It must be deploy-ready by itself.
 
-Video rule:
-- Every song object must include videos: []
-- If videos has one or more entries, render Watch Video buttons.
-- If videos is empty, render Video Coming Soon.
-- Do not remove video logic for artists without videos.
+## Required files
+- index.html
+- songs.json
+- latest.json
+- radio.json
+- manifest.json
+- CNAME, if the repo uses a custom domain
+- update.bat
+- STANDARD.md
+
+## Required folders
+- images/artist
+- images/covers
+- images/logos
+- audio/ optional, but folder remains for future local audio
+
+## Song schema
+Every song object must include `videos`, even if empty.
+
+```json
+"videos": []
+```
+
+If videos exist, render Watch Video. If empty, render Video Coming Soon.
+
+Do not remove operational files when creating a replacement ZIP.
