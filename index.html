@@ -315,7 +315,7 @@ let latestVideoUrl='';
 function normalizeVideos(song){return Array.isArray(song?.videos)?song.videos.filter(v=>v&&v.url):[];}
 function youtubeId(url){const s=String(url||'');let m=s.match(/youtu\.be\/([^?&]+)/);if(m)return m[1];m=s.match(/[?&]v=([^?&]+)/);if(m)return m[1];m=s.match(/embed\/([^?&]+)/);return m?m[1]:'';}
 function youtubeEmbed(url){const id=youtubeId(url);return id?`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`:url;}
-function youtubeThumb(url){const id=youtubeId(url);return id?`https://img.youtube.com/vi/${id}/maxresdefault.jpg`:'';}
+function youtubeThumb(url){const id=youtubeId(url);return id?`https://img.youtube.com/vi/${id}/hqdefault.jpg`:'';}
 function openVideoModal(url){const frame=document.getElementById('video-modal-iframe');if(!frame)return;frame.src=youtubeEmbed(url);document.getElementById('video-modal').classList.add('open');}
 function closeVideoModal(){const modal=document.getElementById('video-modal');const frame=document.getElementById('video-modal-iframe');if(modal)modal.classList.remove('open');if(frame)frame.src='';}
 function openVideoFromLatest(){if(latestVideoUrl)openVideoModal(latestVideoUrl);}
@@ -330,17 +330,27 @@ function updateVideoSection(song){
   const actions=document.getElementById('video-actions');
   const title=document.getElementById('video-section-title');
   if(!soon||!actions)return;
-  if(title)title.textContent=videos.length?(videos[0].title||'Official Video'):'Video Coming Soon';
+
+  // STANDARD: the featured video area is always visible.
+  // If the latest song has a video, show a large clickable thumbnail.
+  // If not, show Video Coming Soon in the same featured slot.
   if(videos.length){
-    latestVideoUrl=videos[0].url;
-    if(embed)embed.classList.add('visible');
-    if(iframe)iframe.src=youtubeEmbed(videos[0].url).replace('autoplay=1','autoplay=0');
-    if(thumb)thumb.classList.remove('has-video');
-    if(img){img.src=youtubeThumb(videos[0].url)||song.cover||'';img.alt=videos[0].title||`${song.title} video`;}
+    const first=videos[0];
+    latestVideoUrl=first.url;
+    if(title)title.textContent=`${song.title} Video`;
+    if(embed)embed.classList.remove('visible');
+    if(iframe)iframe.src='';
+    if(thumb)thumb.classList.add('has-video');
+    if(img){
+      img.src=youtubeThumb(first.url)||song.cover||'';
+      img.alt=first.title||`${song.title} video`;
+      img.onerror=function(){ this.onerror=null; this.src=song.cover||''; };
+    }
     soon.classList.remove('visible');
     actions.innerHTML=videos.map(v=>`<button class="video-btn" onclick="openVideoModal('${v.url}')">${v.title||'Watch Video'}</button><a class="video-btn" href="${v.url}" target="_blank" rel="noopener">Open on YouTube</a>`).join('');
   }else{
     latestVideoUrl='';
+    if(title)title.textContent='Latest Video';
     if(embed)embed.classList.remove('visible');
     if(iframe)iframe.src='';
     if(thumb)thumb.classList.remove('has-video');
@@ -409,6 +419,7 @@ function updateLatest(song){
   const cv=document.getElementById('latest-cover');cv.src=song.cover||'';cv.alt=song.title;
   const lb=document.getElementById('latest-play-btn');lb.onclick=()=>playById(song.id);lb.dataset.playId=song.id;
   const hb=document.getElementById('hero-play-btn');hb.textContent=`▶  Play ${song.title}`;hb.onclick=()=>playById(song.id);
+  updateVideoSection(song);
 }
 async function init(){
   try{
