@@ -64,6 +64,9 @@ body{background:var(--black);color:var(--pearl);font-family:'DM Sans',sans-serif
 .video-panel{background:rgba(0,0,0,0.18);border:1px solid var(--violet-glow);padding:2rem;}
 .video-thumb{position:relative;display:none;aspect-ratio:16/9;overflow:hidden;background:#000;box-shadow:0 24px 64px rgba(0,0,0,.55);cursor:pointer;}
 .video-thumb.has-video{display:block;}
+.video-embed{display:none;aspect-ratio:16/9;width:100%;background:#000;box-shadow:0 24px 64px rgba(0,0,0,.55);}
+.video-embed.visible{display:block;}
+.video-embed iframe{width:100%;height:100%;border:0;display:block;}
 .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);transition:filter .25s,transform .35s;}
 .video-thumb:hover img{filter:brightness(1);transform:scale(1.02);}
 .video-play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);}
@@ -164,7 +167,7 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
 </head>
 <body>
 <nav id="topnav">
-  <img class="nav-logo" src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/logos/silent-oblivion-logo.png" alt="Silent Oblivion">
+  <img class="nav-logo" src="images/logos/silent-oblivion-logo.png" alt="Silent Oblivion">
   <ul class="nav-links">
     <li><a href="#bio">About</a></li>
     <li><a href="#albums">Music</a></li>
@@ -173,12 +176,12 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
   </ul>
 </nav>
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-beginnings-past-album-cover.png');"></div>
+  <div class="hero-bg" style="background-image:url('images/covers/silent-oblivion-beginnings-past-album-cover.png');"></div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <div class="hero-label">Hello Texas Records</div>
     <div class="hero-logo-wrap">
-      <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/logos/silent-oblivion-logo.png" alt="Silent Oblivion">
+      <img src="images/logos/silent-oblivion-logo.png" alt="Silent Oblivion">
     </div>
     <p class="hero-tagline">Some songs don't fade.<br>They haunt.</p>
     <div class="hero-ctas">
@@ -222,6 +225,9 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
   </div>
   <div class="video-wrap">
     <div class="video-panel" id="video-panel">
+      <div class="video-embed" id="video-embed">
+        <iframe id="video-iframe" src="" title="Silent Oblivion video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
       <div class="video-thumb" id="video-thumb" onclick="openVideoFromLatest()">
         <img id="video-thumb-img" src="" alt="">
         <div class="video-play-overlay"><div class="video-play-circle">&#9654;</div></div>
@@ -233,7 +239,7 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
 </section>
 <div id="albums"><div class="loading-ph" id="albums-loading">Loading music…</div></div>
 <footer>
-  <img src="https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/logos/silent-oblivion-logo.png" alt="Silent Oblivion" class="foot-logo">
+  <img src="images/logos/silent-oblivion-logo.png" alt="Silent Oblivion" class="foot-logo">
   <div class="foot-label">Hello Texas Records</div>
   <div class="foot-links">
     <a href="https://stevep999.github.io/hello-texas-records/" target="_blank">Label</a>
@@ -271,8 +277,7 @@ footer{background:var(--black);border-top:1px solid var(--violet-glow);padding:4
 </div>
 <script>
 const ARTIST='Silent Oblivion',REPO='Silent-Oblivion';
-const BASE=`https://raw.githubusercontent.com/SteveP999/${REPO}/main`;
-const SONGS_URL=`${BASE}/songs.json`,LATEST_URL=`${BASE}/latest.json`;
+const SONGS_URL='songs.json',LATEST_URL='latest.json';
 let SONGS=[],ORDER=[],cur=null;
 const audio=document.getElementById('audio'),player=document.getElementById('player'),pThumb=document.getElementById('p-thumb');
 function fmt(s){if(!isFinite(s)||isNaN(s))return'0:00';const m=Math.floor(s/60),sec=Math.floor(s%60);return m+':'+(sec<10?'0':'')+sec;}
@@ -315,7 +320,34 @@ function openVideoModal(url){const frame=document.getElementById('video-modal-if
 function closeVideoModal(){const modal=document.getElementById('video-modal');const frame=document.getElementById('video-modal-iframe');if(modal)modal.classList.remove('open');if(frame)frame.src='';}
 function openVideoFromLatest(){if(latestVideoUrl)openVideoModal(latestVideoUrl);}
 function makeVideoButtons(song){const videos=normalizeVideos(song);if(videos.length){return `<div class="video-actions">${videos.map(v=>`<button class="video-btn" onclick="event.stopPropagation();openVideoModal('${v.url}')">${v.title||'Watch Video'}</button>`).join('')}</div>`;}return `<div class="video-actions"><span class="video-soon-btn">Video Coming Soon</span></div>`;}
-function updateVideoSection(song){const videos=normalizeVideos(song);const thumb=document.getElementById('video-thumb');const img=document.getElementById('video-thumb-img');const soon=document.getElementById('video-coming-soon');const actions=document.getElementById('video-actions');const title=document.getElementById('video-section-title');if(!thumb||!soon||!actions)return;if(title)title.textContent=videos.length?(videos[0].title||'Official Video'):'Video Coming Soon';if(videos.length){latestVideoUrl=videos[0].url;thumb.classList.add('has-video');soon.classList.remove('visible');if(img){img.src=youtubeThumb(videos[0].url)||song.cover||'';img.alt=videos[0].title||`${song.title} video`;}actions.innerHTML=videos.map(v=>`<button class="video-btn" onclick="openVideoModal('${v.url}')">${v.title||'Watch Video'}</button>`).join('');}else{latestVideoUrl='';thumb.classList.remove('has-video');soon.classList.add('visible');actions.innerHTML='<span class="video-soon-btn">Video Coming Soon</span>';}}
+function updateVideoSection(song){
+  const videos=normalizeVideos(song);
+  const embed=document.getElementById('video-embed');
+  const iframe=document.getElementById('video-iframe');
+  const thumb=document.getElementById('video-thumb');
+  const img=document.getElementById('video-thumb-img');
+  const soon=document.getElementById('video-coming-soon');
+  const actions=document.getElementById('video-actions');
+  const title=document.getElementById('video-section-title');
+  if(!soon||!actions)return;
+  if(title)title.textContent=videos.length?(videos[0].title||'Official Video'):'Video Coming Soon';
+  if(videos.length){
+    latestVideoUrl=videos[0].url;
+    if(embed)embed.classList.add('visible');
+    if(iframe)iframe.src=youtubeEmbed(videos[0].url).replace('autoplay=1','autoplay=0');
+    if(thumb)thumb.classList.remove('has-video');
+    if(img){img.src=youtubeThumb(videos[0].url)||song.cover||'';img.alt=videos[0].title||`${song.title} video`;}
+    soon.classList.remove('visible');
+    actions.innerHTML=videos.map(v=>`<button class="video-btn" onclick="openVideoModal('${v.url}')">${v.title||'Watch Video'}</button><a class="video-btn" href="${v.url}" target="_blank" rel="noopener">Open on YouTube</a>`).join('');
+  }else{
+    latestVideoUrl='';
+    if(embed)embed.classList.remove('visible');
+    if(iframe)iframe.src='';
+    if(thumb)thumb.classList.remove('has-video');
+    soon.classList.add('visible');
+    actions.innerHTML='<span class="video-soon-btn">Video Coming Soon</span>';
+  }
+}
 
 function buildTrackArtGrid(tracks){
   return `<div class="album-track-art-block">

@@ -5,7 +5,7 @@
     "title": "Lift Off (With a Bang)",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
+    "cover": "images/covers/silent-oblivion-lift-off-cover.png",
     "audioSrc": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
     "streaming": {
       "spotify": "",
@@ -26,7 +26,7 @@
       "title": "Lift Off (With a Bang)",
       "artist": "Silent Oblivion",
       "album": "Beginnings Past",
-      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
+      "cover": "images/covers/silent-oblivion-lift-off-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
       "streaming": {
         "spotify": "",
@@ -46,7 +46,7 @@
       "title": "Lip Gloss Ghost",
       "artist": "Silent Oblivion",
       "album": "Beginnings Past",
-      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lip-gloss-ghost-cover.png",
+      "cover": "images/covers/silent-oblivion-lip-gloss-ghost-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1",
       "streaming": {
         "spotify": "",
@@ -60,7 +60,7 @@
       "title": "Cruisin'",
       "artist": "Silent Oblivion",
       "album": "Beginnings Past",
-      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
+      "cover": "images/covers/silent-oblivion-cruisin-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
       "streaming": {
         "spotify": "",
@@ -74,7 +74,7 @@
       "title": "Surfin'",
       "artist": "Silent Oblivion",
       "album": "Beginnings Past",
-      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-surfin-cover.png",
+      "cover": "images/covers/silent-oblivion-surfin-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&raw=1",
       "streaming": {
         "spotify": "",
