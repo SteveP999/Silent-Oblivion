@@ -1,21 +1,10 @@
 {
   "name": "Silent Oblivion",
-  "short_name": "Silent Oblivion",
+  "short_name": "Silent Obliv",
   "description": "Silent Oblivion on Hello Texas Records",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#06070C",
-  "theme_color": "#7C6FA0",
-  "icons": [
-    {
-      "src": "images/logos/silent-oblivion-logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "images/logos/silent-oblivion-logo.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "background_color": "#090806",
+  "theme_color": "#d49a25",
+  "icons": []
 }

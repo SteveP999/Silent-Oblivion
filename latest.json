@@ -3,20 +3,9 @@
   "artist": "Silent Oblivion",
   "album": "Beginnings Past",
   "type": "Latest Single",
-  "cover": "images/covers/silent-oblivion-lift-off-cover.png",
-  "image": "images/covers/silent-oblivion-lift-off-cover.png",
+  "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
+  "image": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
   "audio": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
   "audioSrc": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
-  "streaming": {
-    "spotify": "",
-    "appleMusic": "",
-    "youtubeMusic": ""
-  },
-  "videos": [
-    {
-      "type": "official",
-      "title": "Official Video",
-      "url": "https://youtu.be/5q429V93qZM"
-    }
-  ]
+  "videos": []
 }

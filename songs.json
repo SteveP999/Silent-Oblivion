@@ -5,25 +5,21 @@
     "title": "Lift Off (With a Bang)",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "albumCover": "images/covers/silent-oblivion-beginnings-past-album-cover.png",
-    "type": "Latest Single",
+    "trackNumber": 1,
+    "albumOrder": 1,
+    "albumSortOrder": 9999,
+    "sourceOrder": 1,
+    "albumCover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
+    "type": "single",
     "isLatest": true,
-    "cover": "images/covers/silent-oblivion-lift-off-cover.png",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
-    "videos": [
-      {
-        "type": "official",
-        "title": "Official Video",
-        "url": "https://youtu.be/5q429V93qZM"
-      }
-    ],
-    "streaming": {
-      "spotify": "",
-      "appleMusic": "",
-      "youtubeMusic": ""
-    },
+    "audioSrc": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
+    "videos": [],
     "includeOnRadio": true,
-    "includeOnHomepage": true
+    "includeOnHomepage": false,
+    "explicit": false,
+    "tags": []
   },
   {
     "id": "lip_gloss_ghost",
@@ -31,19 +27,21 @@
     "title": "Lip Gloss Ghost",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "albumCover": "images/covers/silent-oblivion-beginnings-past-album-cover.png",
-    "type": "Single",
+    "trackNumber": 2,
+    "albumOrder": 2,
+    "albumSortOrder": 9999,
+    "sourceOrder": 2,
+    "albumCover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lip-gloss-ghost-cover.png",
+    "type": "single",
     "isLatest": false,
-    "cover": "images/covers/silent-oblivion-lip-gloss-ghost-cover.png",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lip-gloss-ghost-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1",
     "videos": [],
-    "streaming": {
-      "spotify": "",
-      "appleMusic": "",
-      "youtubeMusic": ""
-    },
     "includeOnRadio": true,
-    "includeOnHomepage": true
+    "includeOnHomepage": false,
+    "explicit": false,
+    "tags": []
   },
   {
     "id": "cruisin",
@@ -51,19 +49,21 @@
     "title": "Cruisin'",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "albumCover": "images/covers/silent-oblivion-beginnings-past-album-cover.png",
-    "type": "Single",
+    "trackNumber": 3,
+    "albumOrder": 3,
+    "albumSortOrder": 9999,
+    "sourceOrder": 3,
+    "albumCover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
+    "type": "single",
     "isLatest": false,
-    "cover": "images/covers/silent-oblivion-cruisin-cover.png",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
     "videos": [],
-    "streaming": {
-      "spotify": "",
-      "appleMusic": "",
-      "youtubeMusic": ""
-    },
     "includeOnRadio": true,
-    "includeOnHomepage": true
+    "includeOnHomepage": false,
+    "explicit": false,
+    "tags": []
   },
   {
     "id": "surfin",
@@ -71,18 +71,20 @@
     "title": "Surfin'",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "albumCover": "images/covers/silent-oblivion-beginnings-past-album-cover.png",
-    "type": "Single",
+    "trackNumber": 4,
+    "albumOrder": 4,
+    "albumSortOrder": 9999,
+    "sourceOrder": 4,
+    "albumCover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-surfin-cover.png",
+    "type": "single",
     "isLatest": false,
-    "cover": "images/covers/silent-oblivion-surfin-cover.png",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-surfin-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&raw=1",
+    "audioSrc": "https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&raw=1",
     "videos": [],
-    "streaming": {
-      "spotify": "",
-      "appleMusic": "",
-      "youtubeMusic": ""
-    },
     "includeOnRadio": true,
-    "includeOnHomepage": true
+    "includeOnHomepage": false,
+    "explicit": false,
+    "tags": []
   }
 ]
