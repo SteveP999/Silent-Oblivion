@@ -43,7 +43,13 @@
     "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lip-gloss-ghost-cover.png",
     "audio": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1",
     "audioSrc": "https://www.dropbox.com/scl/fi/j087cbyzyv8jh89ifcc4o/silent-oblivion-lip-gloss-ghost-mastered-MP3.mp3?rlkey=u3a79co0vb1qee24142goud4f&raw=1",
-    "videos": [],
+    "videos": [
+      {
+        "title": "Lip Gloss Ghost",
+        "youtube": "https://youtu.be/VJNSSSdlJ2s",
+        "order": 2
+      }
+    ],
     "includeOnRadio": true,
     "includeOnHomepage": false,
     "explicit": false,
