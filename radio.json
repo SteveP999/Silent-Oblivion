@@ -2,20 +2,22 @@
   "artist": "Silent Oblivion",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Lift Off (With a Bang)",
+    "title": "Cruisin'",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-lift-off-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/tctbe476glsb4mu3hv7k7/Lift-Off-With-a-Bang-Mastered-MP3.mp3?rlkey=2dt2a3mayzne6l1lff1jf3t00&raw=1",
-    "videos": [
-      {
-        "title": "Lift Off (With a Bang)",
-        "youtube": "https://youtu.be/5q429V93qZM",
-        "order": 1
-      }
-    ]
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
+    "videos": []
   },
   "tracks": [
+    {
+      "title": "Cruisin'",
+      "artist": "Silent Oblivion",
+      "album": "Beginnings Past",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
+      "videos": []
+    },
     {
       "title": "Lift Off (With a Bang)",
       "artist": "Silent Oblivion",
@@ -43,14 +45,6 @@
           "order": 2
         }
       ]
-    },
-    {
-      "title": "Cruisin'",
-      "artist": "Silent Oblivion",
-      "album": "Beginnings Past",
-      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
-      "audioSrc": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
-      "videos": []
     },
     {
       "title": "Surfin'",
