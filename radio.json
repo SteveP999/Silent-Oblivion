@@ -2,14 +2,22 @@
   "artist": "Silent Oblivion",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Cruisin'",
+    "title": "Bubblegum",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-cruisin-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/9pvkuega75b3cvyrv4aiw/silent-oblivion-cruisin-mastered-mp3.mp3?rlkey=zc46e28eaj60ia8dxdxilyr2m&raw=1",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-bubblegum-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/3lx7e5ochef1cyhhgcxb3/silent-oblivion-bubblegum-mp3.mp3?rlkey=xeat09g9mpdeqkqh7296kgtva&raw=1",
     "videos": []
   },
   "tracks": [
+    {
+      "title": "Bubblegum",
+      "artist": "Silent Oblivion",
+      "album": "Beginnings Past",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-bubblegum-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/3lx7e5ochef1cyhhgcxb3/silent-oblivion-bubblegum-mp3.mp3?rlkey=xeat09g9mpdeqkqh7296kgtva&raw=1",
+      "videos": []
+    },
     {
       "title": "Cruisin'",
       "artist": "Silent Oblivion",
