@@ -2,11 +2,11 @@
   "artist": "Silent Oblivion",
   "latestUrl": "latest.json",
   "featuredTrack": {
-    "title": "Bubblegum",
+    "title": "World Cup Victory",
     "artist": "Silent Oblivion",
     "album": "Beginnings Past",
-    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-bubblegum-cover.png",
-    "audioSrc": "https://www.dropbox.com/scl/fi/3lx7e5ochef1cyhhgcxb3/silent-oblivion-bubblegum-mp3.mp3?rlkey=xeat09g9mpdeqkqh7296kgtva&raw=1",
+    "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-world-cup-victory-cover.png",
+    "audioSrc": "https://www.dropbox.com/scl/fi/3et3s93lnb67h3ev6npul/silent-oblivion-world-cup-victory.mp3?rlkey=gbqa1d2dez0cp3mvce4z9342o&raw=1",
     "videos": []
   },
   "tracks": [
@@ -60,6 +60,14 @@
       "album": "Beginnings Past",
       "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-surfin-cover.png",
       "audioSrc": "https://www.dropbox.com/scl/fi/h78uz069co3qihjn5a8c1/silent-oblivion-surfin-mastered-mp3.mp3?rlkey=qzee0gdurw8j8z4etd63jbdmd&raw=1",
+      "videos": []
+    },
+    {
+      "title": "World Cup Victory",
+      "artist": "Silent Oblivion",
+      "album": "Beginnings Past",
+      "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-world-cup-victory-cover.png",
+      "audioSrc": "https://www.dropbox.com/scl/fi/3et3s93lnb67h3ev6npul/silent-oblivion-world-cup-victory.mp3?rlkey=gbqa1d2dez0cp3mvce4z9342o&raw=1",
       "videos": []
     }
   ]
