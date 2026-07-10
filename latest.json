@@ -3,8 +3,8 @@
   "artist": "Silent Oblivion",
   "album": "Beginnings Past",
   "type": "Latest Single",
-  "cover": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-world-cup-victory-cover.png",
-  "image": "https://raw.githubusercontent.com/SteveP999/Silent-Oblivion/main/images/covers/silent-oblivion-world-cup-victory-cover.png",
+  "cover": "images/covers/silent-oblivion-world-cup-victory-cover.png",
+  "image": "images/covers/silent-oblivion-world-cup-victory-cover.png",
   "audio": "https://www.dropbox.com/scl/fi/3et3s93lnb67h3ev6npul/silent-oblivion-world-cup-victory.mp3?rlkey=gbqa1d2dez0cp3mvce4z9342o&raw=1",
   "audioSrc": "https://www.dropbox.com/scl/fi/3et3s93lnb67h3ev6npul/silent-oblivion-world-cup-victory.mp3?rlkey=gbqa1d2dez0cp3mvce4z9342o&raw=1",
   "videos": []
